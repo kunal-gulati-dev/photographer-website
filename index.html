@@ -15,8 +15,10 @@
     <!-- custom font link -->
     <link rel="stylesheet" href="./assets/font/font.css">
     <!-- preload images -->
+    <link rel="preload" as="image" href="./assets/images/loading.svg">
+    <link rel="preload" as="image" href="./assets/images/loading-circle.svg">
 </head>
-<body class="active">
+<body class="active" id="top">
     <!-- #Pre Loading -->
     <div class="loading" data-loading>
         <img src="./assets/images/loading.svg" width="55" height="55" alt="loading" class="img">
@@ -657,7 +659,11 @@
 
             </footer>
 
-            
+            <!-- back to top -->
+
+            <a href="#top" class="back-top-btn show" aria-label="back to top" data-back-top-btn>0%</a>
+
+
 
         </article>
     </main>
