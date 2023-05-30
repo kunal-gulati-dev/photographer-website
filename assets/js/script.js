@@ -131,5 +131,42 @@ window.addEventListener("load", setLetterEffect);
 
 
 
+// back to top button
+
+const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+window.addEventListener("scroll", function () {
+    const bodyHeight = document.body.scrollHeight;
+    const windowHeight = window.innerHeight;
+    const scrollEndPos = bodyHeight - windowHeight;
+    const totalScrollPercent = (window.scrollY / scrollEndPos) * 100;
+    backTopBtn.textContent = `${totalScrollPercent.toFixed(0)}%`;
+
+    // visible back top btn when scrolled 5% of the page
+    if (totalScrollPercent > 5) {
+        backTopBtn.classList.add("show")
+    }else {
+        backTopBtn.classList.remove("show")
+    }
+})
 
 
+// scroll reveal 
+
+const revealElements = document.querySelectorAll("[data-reveal]")
+const scrollReveal = function () {
+    for (let i = 0; i < revealElements.length; i++) {
+        const elementIsInScreen = revealElements[i].getBoundingClientRect().top < window.innerHeight / 1.15;
+
+        if (elementIsInScreen) {
+            revealElements[i].classList.add("revealed");
+        } else {
+            revealElements[i].classList.remove("revealed");
+        }
+    }
+}
+
+
+window.addEventListener("scroll", scrollReveal);
+
+scrollReveal();

@@ -294,6 +294,28 @@ body.active {
 }
 
 
+[data-reveal] {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: var(--transition-3);
+}
+
+[data-reveal="left"] {
+  transform: translate(-50px, 0);
+}
+
+[data-reveal="right"] {
+  transform: translate(50px, 0);
+}
+
+
+[data-reveal].revealed {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+
+
 
 /*-----------------------------------*\
   #LOADING
@@ -1029,6 +1051,9 @@ body.active {
   #CUSTOM CURSOR
 \*-----------------------------------*/
 
+.cursor {
+  display: none;
+}
 
 
 
