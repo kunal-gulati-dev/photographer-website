@@ -854,7 +854,53 @@ body.active {
   #PORTFOLIO
 \*-----------------------------------*/
 
+.portfolio {
+  padding-block-end: 100px;
+}
 
+.portfolio .section-title {
+  margin-block-end: 60px;
+}
+
+.portfolio-card {
+  position: relative;
+  margin-block-end: 50px;
+}
+
+.portfolio-card :is(.card-content, .btn-icon) {
+  position: absolute;
+  z-index: 1;
+}
+
+.portfolio-card .card-content {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 15px;
+}
+
+.portfolio-card .card-tag {
+  color: var(--white_a70);
+  font-weight: var(--fw-300);
+}
+
+.portfolio-card .btn-icon {
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+
+  --hover-bg-color: var(--radical-red);
+  --hover-text-color: var(--white);
+}
+
+.portfolio-card .btn-icon svg {
+  width: 20px;
+}
+
+.portfolio-card .card-title:is(:hover, :focus) {
+  text-decoration: underline;
+}
 
 
 
@@ -862,6 +908,86 @@ body.active {
   #FOOTER
 \*-----------------------------------*/
 
+.footer {
+  position: relative;
+}
+
+.footer .abs-img {
+  display: none;
+}
+
+.footer-top {
+  padding-block: 100px 140px;
+  border-block-start: 1px solid var(--white_a9);
+  text-align: center;
+  z-index: 1;
+}
+
+.footer-top .section-title {
+  margin-block: 20px 90px;
+  line-height: normal;
+}
+
+.footer .btn-icon {
+  width: 60px;
+  height: 60px;
+  margin-inline: auto;
+  --hover-bg-color: var(--radical-red);
+
+}
+
+.footer .btn-icon img {
+  width: 30px;
+}
+
+.footer-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: -1;
+}
+
+.footer-bg::before {
+  inset: 0;
+  background-image: var(--gradient-2);
+}
+
+.footer-bg .img-cover {
+  object-position: top;
+}
+
+.footer-bottom .logo {
+  margin-inline: auto;
+  max-width: max-content;
+  margin-block-end: 20px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-link {
+  font-weight: var(--fw-500);
+}
+
+.social-link:is(:hover, :focus-visible) {
+  text-decoration: underline;
+}
+
+.copyright,
+.social-link {
+  padding-block-end: 15px;
+}
+
+.copyright {
+  font-weight: var(--fw-300);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
 
 
 
